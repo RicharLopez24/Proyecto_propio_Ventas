@@ -1,0 +1,166 @@
+.vista-registro {
+
+    background-color: #C0C0C0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.BoxTextRegister {
+
+    align-items: center;
+    height: 270px;
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    margin-left: 20%;
+}
+
+.Input-Registro {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+}
+.vistas{
+    height: 100%;
+    width: 100%;
+}
+.inputs {
+    height: 32px;
+    width: 180px;
+    
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input-img{
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cursorRegis :hover {
+    background-color: #cae3ed;
+    cursor: pointer;
+}
+
+
+.Color_Button {
+    background-color: rgba(136, 178, 186, 0.657);
+    height: 25px;
+    width: 130px;
+}
+
+.ButtonRegistro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.select{
+    height: 32px;
+    width: 180px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+.option {
+    cursor: pointer;
+}
+
+.products{
+    
+    background-color: rgb(206, 208, 206);
+    height: 35vh;
+    width: 25vh;
+    padding: 10px 10px 10px 10px;    
+    margin: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.targeta{
+    display: flex;
+    min-width: 10vh;
+    background-color: #eed5d5;
+    
+}
+.logoProduct{
+    width: 75px;
+    height: 75px;
+}
+
+.imgProduct{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.databox{
+    display: flex;  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.targeta-edi{
+    display: flex;
+    min-width: 10vh;
+    background-color: #eed5d5;
+    
+}
+.logoProduct-edi{
+    width: 75px;
+    height: 75px;
+}
+
+.imgProduct-edi{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.databox-edi{
+    display: flex;  
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data-edi{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+}
+.products-edi{
+    
+    background-color: rgb(206, 208, 206);
+    height: 35vh;
+    width: 30vh;
+    padding: 10px 10px 10px 10px;    
+    margin: 5px 5px 5px 5px;    
+    border-radius: 60px;
+
+}
+
+.iconedit{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: darkgrey;
+    margin-left: 10px;
+
+}

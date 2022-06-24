@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #0f6790;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Target {
+  
+  background-color: rgb(64, 112, 136);
+  width: 25%;
+  height: 80vh;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.Data {
+  font-size: calc(10px + 2vmin);
+  border-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Input {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.Division {
+  
+  margin-top: 10px;
+  text-align: center;  
+  align-items: center;
+  justify-content: center;
+}
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.Color_Button{
+  background-color: rgba(25, 178, 206, 0.657);
+  height: 30px;
+  width: 70px;
+}
+.cursor :hover {
+  background-color: #3ba3d3;
+  cursor: pointer;
+}
+
+.BoxText {
+  display: flexbox;
+  align-items: center;
+}
+
+.Registro{
+  margin-left: 15px;
+}
+.Registro :hover{
+  color: #94abd5;
+  cursor: pointer;
+}
+.img{
+  height: 35%;
+  width: 35%;
+  
+}
+.Login_img{
+  
+  align-items: center;
+  text-align: center;    
+}
+
+.Button_firebase{
+  margin-top: 15px;
+}
+.Button_firebase :hover {
+  background-color: #abbac0;
+  cursor: pointer;
+}
+
+.App-header-registro {
+  background-color: #0f6790;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Data-re {
+  font-size: calc(10px + 2vmin);
+  border-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.ventas-vista{
+  
+  background-color: #C0C0C0;
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+  
+}
+.ventana{
+  display: flexbox;
+  min-width: 100%;
+}
+.contador{
+  background-color: #0f6790;
+  min-height: 5vh;
+  margin: 7px 7px 7px 7px;
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+}
+.search {
+  display: flex;
+  padding: 5px 5px 5px 5px;
+  
+}
+
+.icon {
+  background-color: #9a9a9a;
+}
+
+
+.search-box {
+  font-weight: 100;
+}
+
+.shopping{
+  padding-left: 15px;
+  padding-right: 20px;
+  align-items: center;
+  align-content: center;
+  display: flex;
+
+}
+.targetProductos{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px 10px 10px;
+  justify-content: center;
 }

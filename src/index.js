@@ -3,11 +3,41 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Registro from './Views/Registro';
+import Ventas from './Views/Ventas';
+import Estadisticas from './Views/Estadisticas';
+import Config from './Views/Config';
+import ReProduct from './Views/Re_product'
+//import Login from './Login/Login';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+
+
+    <Routes>
+      <Route path='/'  element={<App />}>
+        
+        <Route path='/ventas' exact element={<Ventas />} />
+        <Route path='/stock' exact element={<ReProduct />} />
+        <Route path='/estadisticas' exact element={<Estadisticas />} />
+        <Route path='/configuracion' exact element={<Config />} />
+
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />        
+      </Route>
+      
+      <Route path='/Registro' exact element={<Registro />} />
+    </Routes>
+
+
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

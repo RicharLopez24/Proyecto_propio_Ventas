@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { auth } from './Firebase/Firebase';
+import Login from './Login/Login';
+import { useAuthState } from 'react-firebase-hooks/auth';
+//import Home from './Views/Home';
+//import { BrowserRouter, Route, Routes } from 'react-router-dom';
+//import Registro from './Views/Registro';
+import Navbar from './Router/Navbar';
+import { Outlet } from "react-router-dom";
 
 function App() {
+
+  const [user] = useAuthState(auth);
+  if(!user) return <Login/>
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Navbar/>             
+      <Outlet />
     </div>
   );
 }
 
 export default App;
+
+
