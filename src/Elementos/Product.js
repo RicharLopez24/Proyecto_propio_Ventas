@@ -1,43 +1,59 @@
+import { addDoc, collection } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
+import { db } from '../Firebase/Firebase';
 import './Registro.css'
 
-function Product({cont}) {
+function Product({ cont }) {
 
-  const [conta,setSuma] = useState(0)
-  const precio = 0
   
-  const prueba = () => {
+  const prueba = async (produ) => {
+    
+    try {
+      const docRef = addDoc(collection(db, 'Tienda/cart/auxi/1/123'), {
+
+        nombreProdcuto: produ.nombreProdcuto,
+        precio: produ.precio,
+        img: produ.img,
+      });
+      console.log("Document written with ID: ", (await docRef).id);
+
+      alert('productos registrado')
+      
+      //window.location = "/stock"
+    } catch (e) {
+      console.error("Error adding document: ", e);
+
+    }
     //console.log('haciendo prueba ')
     
-
-    setSuma(conta + Number(cont.precio))
-    //setSuma(conta )
-    console.log(conta)
+    console.log(produ)
+    //console.log(idCarrito())
   }
-
-  useEffect(()=>{
-    console.log('la suma es:',conta)
-  })
+  /*
+    useEffect(()=>{
+      console.log('la suma es:',conta)
+    })*/
 
   return (
     <div className='targeta'>
-      <div className='products' onClick={prueba}>
+      <div className='products'
+        onClick={() => prueba(cont)}>
         <div className='imgProduct'>
           {/*<ImageIcon className='logoProduct' path=''/>*/}
           <img src={cont.img}
-          alt=''
-          className='logoProduct'/>
+            alt=''
+            className='logoProduct' />
         </div>
 
         <div className='databox'>
           <div className='data'>
-          {cont.nombreProdcuto}
+            {cont.nombreProdcuto}
           </div>
           <div className='data'>
-          {cont.cantidad}
+            {cont.cantidad}
           </div>
           <div className='data'>
-          ${cont.precio}
+            ${cont.precio}
           </div>
         </div>
 

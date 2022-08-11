@@ -61,7 +61,7 @@ function ViewRegistre() {
         } else {
 
             try {
-                const docRef = addDoc(collection(db, 'Tienda/'), {
+                const docRef = addDoc(collection(db, 'Tienda/productos/Registro'), {
 
                     nombreProdcuto: producto,
                     cantidad: cantidad,
@@ -83,7 +83,7 @@ function ViewRegistre() {
 
     const [dataList, setDataList] = useState([]);
     const fetchMyAPI = useCallback(async () => {
-        const q = query(collection(db, "Tienda/"));
+        const q = query(collection(db, 'Tienda/productos/Registro'));
         const dataList = [];
 
 

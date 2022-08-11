@@ -147,6 +147,8 @@
   align-items: center;
   align-content: center;
   display: flex;
+  color: black;
+  text-decoration: none;
 
 }
 .targetProductos{

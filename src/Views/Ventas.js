@@ -5,15 +5,17 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import { db } from '../Firebase/Firebase';
 import { collection, getDocs, query } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
+
 
 
 function Ventas() {
 
+  
   const fetchMyAPI = useCallback(async () => {
-    const q = query(collection(db, "Tienda/"));
+
+    const q = query(collection(db, 'Tienda/productos/Registro'));
     const dataList = [];
-
-
 
     //asignamos los valores a data list de useState
     const querySnapshot = await getDocs(q);
@@ -26,10 +28,11 @@ function Ventas() {
   }, [])
 
   const [dataList, setDataList] = useState([]);
-  useEffect( () => {
+  useEffect(() => {
 
     fetchMyAPI()
   }, [fetchMyAPI])
+
 
   return (
     <div className='ventas-vista'>
@@ -38,10 +41,12 @@ function Ventas() {
 
 
         <div className='contador'>
-          <div className='shopping'>
-            <AddShoppingCartIcon />
-            cantidad
-            $
+          <div >
+            <Link to='/cart/productos' className='shopping'>
+              <AddShoppingCartIcon />
+              cantidad
+              $
+            </Link>
           </div>
           <div>
             <button className='Color_Button' >
@@ -65,7 +70,8 @@ function Ventas() {
         <div >
           <div className='targetProductos'>
             {dataList ? dataList.map((cont, index) => //hace mapeo de los datos en cont que sera el contenido
-              <Product cont={cont} key={index} />) : ''}
+              <Product cont={cont} key={index}
+              />) : ''}
 
 
           </div>

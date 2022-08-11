@@ -9,6 +9,7 @@ import Ventas from './Views/Ventas';
 import Estadisticas from './Views/Estadisticas';
 import Config from './Views/Config';
 import ReProduct from './Views/Re_product'
+import Cart from './Views/Cart';
 //import Login from './Login/Login';
 
 ReactDOM.render(
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path='/'  element={<App />}>
         
         <Route path='/ventas' exact element={<Ventas />} />
+        <Route path='/cart/productos' exact element={<Cart />} />
         <Route path='/stock' exact element={<ReProduct />} />
         <Route path='/estadisticas' exact element={<Estadisticas />} />
         <Route path='/configuracion' exact element={<Config />} />
